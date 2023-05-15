@@ -5,7 +5,7 @@ from transformers import BlenderbotForConditionalGeneration
 from translate import Translator
 
 
-@st.experimental_singleton
+@st.cache_resource
 def get_models():
     # it may be necessary for other frameworks to cache the model
     # seems pytorch keeps an internal state of the conversation
