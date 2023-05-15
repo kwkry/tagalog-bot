@@ -17,6 +17,7 @@ def get_models():
 if "history" not in st.session_state:
     st.session_state.history = []
 
+st.set_page_config(page_title="Tagalog Chatbot", page_icon="🤖")    
 st.title("Hello Chatbot")
 
 translator_en = Translator(from_lang='tl', to_lang='en')
@@ -37,7 +38,7 @@ def generate_answer(max_length=2048):
     st.session_state.history.append({"message": translation_tl, "is_user": False})
 
 
-st.text_input("Talk to the bot", key="input_text", on_change=generate_answer)
+st.text_input("Kausapin mo ako 😊", key="input_text", on_change=generate_answer)
 
 for i, chat in enumerate(st.session_state.history):
     st_message(**chat, key=str(i)) #unpacking
