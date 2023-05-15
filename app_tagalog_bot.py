@@ -27,7 +27,7 @@ def generate_answer(max_length=2048):
     tokenizer, model = get_models()
     user_message = st.session_state.input_text
     translation_en = translator_en.translate(user_message)
-    inputs = tokenizer.encode(st.session_state.input_text, return_tensors="pt")
+    inputs = tokenizer.encode(translation_en, return_tensors="pt")
     result = model.generate(inputs, max_length=len(inputs[0]) + max_length, do_sample=False)
     message_bot = tokenizer.decode(
         result[0], skip_special_tokens=True
