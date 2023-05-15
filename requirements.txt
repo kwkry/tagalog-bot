@@ -3,4 +3,4 @@ streamlit-chat
 transformers
 translate
 --find-links https://download.pytorch.org/whl/torch_stable.html
-torch==1.2.0+cpu
+torch
