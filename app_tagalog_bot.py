@@ -17,8 +17,8 @@ def get_models():
 if "history" not in st.session_state:
     st.session_state.history = []
 
-st.set_page_config(page_title="Tagalog Chatbot", page_icon="🤖")    
-st.title("Tagalog Chatbot")
+st.set_page_config(page_title="Filipino Chatbot", page_icon="🤖")    
+st.title("Filipino Chatbot")
 
 translator_en = Translator(from_lang='tl', to_lang='en')
 translator_tl = Translator(from_lang='en', to_lang='tl')
