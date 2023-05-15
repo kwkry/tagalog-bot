@@ -38,7 +38,7 @@ def generate_answer():
     st.session_state.history.append({"message": translation_tl, "is_user": False})
 
 
-st.text_input("Talk to the bot", key="input_text", on_change=generate_answer)
+st.text_input("Kausapin mo ako 😊", key="input_text", on_change=generate_answer)
 
 for i, chat in enumerate(st.session_state.history):
     st_message(**chat, key=str(i)) #unpacking
